@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom is Fun</title>
+</head>
+<body style="background-color: bisque;color: crimson;">
+    
+</body>
+<script>
+   const div= document.createElement('div')
+   console.log(div);
+   //adding properties in div element ie.class,id etc.
+   div.id="Rabindra"
+   div.className="main"
+   //div.id =(Math.random()*10 +1)
+   //Setting some other custom attributes
+   div.setAttribute("title","generated title")  //setting title  and title ka value is generated title.
+   //Adding styling 
+   div.style.backgroundColor="green"
+   div.style.padding='12px'
+   div.innerText=" I am learning DOM"    //inertext will fetch initial value and then  overwrite the values while set will directly set it.
+   const text=document.createTextNode("Rabindra is Undergraduate")
+   div.appendChild(text)  //This method is more prefarable.
+
+   // But now it wil not show the text becaus ewe also need to append it to our body eg:
+   document.body.appendChild(div)
+</script>
+</html>

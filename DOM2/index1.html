@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Part2</title>
+    <style>
+        body{
+            background-color: bisque;
+            color: rgb(228, 85, 85);
+        }
+    </style>
+</head>
+<body>
+    <div class="parent">
+        <div class="day">Monday</div>
+        <div class="day">Tuesday</div>
+        <div class="day">Wednesday</div>
+        <div class="day">Thursday</div>
+    </div>
+    <script>
+        const parent=document.querySelector('.parent')
+        console.log(parent)
+        console.log(parent.children);
+        console.log(parent.children[1].innerText);
+        parent.children[0].style.color="Blue"
+        console.log(parent.firstElementChild);
+        console.log(parent.lastElementChild);
+        //Acessing parent from child
+        const dayone=document.querySelector('.day')
+        console.log(dayone.parentElement);
+
+        //Similarly we can also acess th enext siblings 
+        console.log(dayone.nextElementSibling);
+        console.log("Nodes", parent.childNodes);
+    </script>
+</body>
+</html>
