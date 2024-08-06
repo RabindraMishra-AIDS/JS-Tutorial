@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom : Final Part</title>
+</head>
+<body>
+    <ul class="language">
+        <li>Javascript</li>
+    </ul>
+</body>
+<script>
+function addlang(lang){
+    const li=document.createElement('li');
+    li.innerHTML=`${lang}`
+    document.querySelector('.language').appendChild(li)
+}
+addlang("Python")
+addlang("Typescript")
+//More Optimized writing 
+
+function Optimizedadd(l){
+    const li =document.createElement('li')
+    li.appendChild(document.createTextNode(l))
+    document.querySelector('.language').appendChild(li)
+}
+Optimizedadd('Ruby')
+
+//Removing an element
+const lastlang=document.querySelector('li:nth-child(2)')   //Removing second child of li 
+lastlang.remove()
+
+//Editing the element
+const edit=document.querySelector('li:first-child')
+edit.outerHTML='<li style="color: brown;"> Mojo </li>' //editing it with outerHTML
+</script>
+</html>
