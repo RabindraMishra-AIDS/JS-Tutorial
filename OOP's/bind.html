@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>React</title>
+</head>
+<body>
+    <button>Button clicked</button>
+</body>
+<script>
+    class React {
+        constructor(){
+            this.library='React'
+            this.server="https://localhost:300"
+
+            //Requirement (jaise hi page oad ho ek react ka document load hojaye)
+            document
+            .querySelector('Button')
+            .addEventListener('click',this.handleClick.bind(this))  //It will bind everything 
+        }
+        handleClick(){
+            console.log('Button is clicked');
+            console.log(this.server);  //this ka reference is not getting.
+            
+        }
+    }
+    const app=new React()
+</script>
+</html>
